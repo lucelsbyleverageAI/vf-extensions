@@ -31,7 +31,8 @@
     <div id="voiceflow-chat-frame"></div>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
     <script type="module">
-      import { DisableInputExtension,
+      import { ExtensionDelayMessage,
+                DisableInputExtension,
                 VideoExtension,
                 TimerExtension,
                 FormExtension,
@@ -60,6 +61,7 @@
             allowDangerousHTML: true,
             assistant: {
               extensions: [
+                ExtensionDelayMessage,
                 DisableInputExtension,
                 VideoExtension,
                 TimerExtension,
@@ -69,7 +71,7 @@
                 KBUploadExtension,
                 DateExtension,
                 ConfettiExtension,
-                FeedbackExtension,
+                FeedbackExtension
               ],
             },
           });
